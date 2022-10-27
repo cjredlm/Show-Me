@@ -1,0 +1,4 @@
+Creacion de credenciales
+
+
+prosodyctl register Usuario show-me.cc Contraseña
