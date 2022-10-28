@@ -1,0 +1,18 @@
+***************** Show-Me - Install *****************
+
+
+sudo apt-get update 
+sudo apt-get upgrade
+sudo apt -y install cockpit
+sudo systemctl start cockpit.socket
+sudo systemctl enable cockpit.socket
+sudo ufw allow 9090
+y despues
+wget -qO - https://download.jitsi.org/jitsi-key.gpg.key | apt-key add -
+vim /etc/apt/sources.list.d/jitsi-stable.list
+deb https://download.jitsi.org stable/
+apt update
+apt install jitsi-meet
+add-apt-repository ppa:certbot/certbot
+apt install certbot
+/usr/share/jitsi-meet/scripts/install-letsencrypt-cert.sh
